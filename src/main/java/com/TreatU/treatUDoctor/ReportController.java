@@ -36,6 +36,7 @@ public class ReportController {
         map.put("consultation_date", consultation.getDate().toString());
         map.put("consultation_time", consultation.getIdSession().getStartTime() +" - "+ consultation.getIdSession().getEndTime());
         map.put("employee_name", consultation.getIdEmployee().getFirstName() +" "+consultation.getIdEmployee().getLastName());
+        map.put("doctor_name", consultation.getIdPsikolog().getName());
         map.put("status_consultation", consultation.getIdConsultationStatus().getNameConsultationStatus());
         
         try {
